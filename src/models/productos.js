@@ -4,8 +4,8 @@ class productosModel{
 
     async create(producto){
 
-        const colProductos = dbClient.db.collection('ahorro_surtido');
-        await colProductos.insertOne(producto)
+        const colProductos = dbClient.db.collection('productos');
+        return await colProductos.insertOne(producto)
 
     }
 }

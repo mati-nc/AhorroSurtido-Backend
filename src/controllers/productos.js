@@ -11,7 +11,7 @@ class productosController {
 
     async create(req,rest){
         try{
-            const data = productosModel.create(req.body);
+            const data = await productosModel.create(req.body);
             rest.status(201).json(data);
         }catch(e){
             rest.status(500).send(e)
