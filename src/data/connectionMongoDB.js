@@ -1,5 +1,7 @@
-/* "mongodb://localhost:27017"; */
+// Conexión con mongodb local con MongoDB Compass 
 
+/* "mongodb://localhost:27017"; */
+/* 
 import {MongoClient} from "mongodb";
 
 const getConnection = async() =>{
@@ -13,4 +15,4 @@ const getConnection = async() =>{
     }
 };
 
-export {getConnection};
+export {getConnection}; */

@@ -1,3 +1,6 @@
+import productosModel from '../models/productos.js'
+
+
 class productosController {
 
     constructor(){
@@ -8,7 +11,8 @@ class productosController {
 
     async create(req,rest){
         try{
-            rest.status(201).json({status: 'create-ok'});
+            const data = productosModel.create(req.body);
+            rest.status(201).json(data);
         }catch(e){
             rest.status(500).send(e)
         }
