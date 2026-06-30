@@ -8,6 +8,12 @@ class productosModel{
         return await colProductos.insertOne(producto)
 
     }
+    async createMany(producto){
+
+        const colProductos = dbClient.db.collection('productos');
+        return await colProductos.insertMany(producto)
+
+    }
 }
 
 export default new productosModel;
